@@ -49,6 +49,7 @@
     "        day=input(\"Incorrect input. Please input the full name of the day:\")\n",
     "        day=day.lower()\n",
     "\n",
+    "    print('Thank you!')",
     "    print('-'*40)\n",
     "    return city, month, day\n",
     "\n",
