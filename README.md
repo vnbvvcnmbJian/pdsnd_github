@@ -2,7 +2,7 @@
 Bikeshare in three cities 20200114 and README file.
 
 ### Project Title
-bikeshare
+bikeshare data analysis
 
 ### Description
 Analysis of the bike share data in three cities, Chicago, Washington and New york city.
