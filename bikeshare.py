@@ -1,38 +1,4 @@
 {
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": 2,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Hello! Let's explore some US bikeshare data!\n",
-      "Please choose a city you are interested in, Chicago, New york city, or Washington:New york city\n",
-      "Thank you! Nice choice.\n",
-      "Would you like to choose all the six months or which month would you like to explore:January\n",
-      "Thank you!\n",
-      "Would you like to choose all the days or which day would you like to explore:Monday\n",
-      "Thank you!\n",
-      "----------------------------------------\n"
-     ]
-    },
-    {
-     "ename": "AttributeError",
-     "evalue": "'DatetimeProperties' object has no attribute 'weekday_name'",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[1;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
-      "\u001b[1;32m<ipython-input-2-60ae7d530021>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m\u001b[0m\n\u001b[0;32m    211\u001b[0m \u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m    212\u001b[0m \u001b[1;32mif\u001b[0m \u001b[0m__name__\u001b[0m \u001b[1;33m==\u001b[0m \u001b[1;34m\"__main__\"\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m--> 213\u001b[1;33m     \u001b[0mmain\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m",
-      "\u001b[1;32m<ipython-input-2-60ae7d530021>\u001b[0m in \u001b[0;36mmain\u001b[1;34m()\u001b[0m\n\u001b[0;32m    197\u001b[0m     \u001b[1;32mwhile\u001b[0m \u001b[1;32mTrue\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m    198\u001b[0m         \u001b[0mcity\u001b[0m\u001b[1;33m,\u001b[0m \u001b[0mmonth\u001b[0m\u001b[1;33m,\u001b[0m \u001b[0mday\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mget_filters\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m--> 199\u001b[1;33m         \u001b[0mdf\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mload_data\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mcity\u001b[0m\u001b[1;33m,\u001b[0m \u001b[0mmonth\u001b[0m\u001b[1;33m,\u001b[0m \u001b[0mday\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m    200\u001b[0m \u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m    201\u001b[0m         \u001b[0mdisplay_raw_data\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mdf\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n",
-      "\u001b[1;32m<ipython-input-2-60ae7d530021>\u001b[0m in \u001b[0;36mload_data\u001b[1;34m(city, month, day)\u001b[0m\n\u001b[0;32m     79\u001b[0m     \u001b[0mdf\u001b[0m\u001b[1;33m[\u001b[0m\u001b[1;34m\"Start Time\"\u001b[0m\u001b[1;33m]\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mpd\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mto_datetime\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mdf\u001b[0m\u001b[1;33m[\u001b[0m\u001b[1;34m\"Start Time\"\u001b[0m\u001b[1;33m]\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m     80\u001b[0m     \u001b[0mdf\u001b[0m\u001b[1;33m[\u001b[0m\u001b[1;34m\"month\"\u001b[0m\u001b[1;33m]\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mdf\u001b[0m\u001b[1;33m[\u001b[0m\u001b[1;34m\"Start Time\"\u001b[0m\u001b[1;33m]\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mdt\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mmonth\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m---> 81\u001b[1;33m     \u001b[0mdf\u001b[0m\u001b[1;33m[\u001b[0m\u001b[1;34m\"day_of_week\"\u001b[0m\u001b[1;33m]\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mdf\u001b[0m\u001b[1;33m[\u001b[0m\u001b[1;34m\"Start Time\"\u001b[0m\u001b[1;33m]\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mdt\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mweekday_name\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m     82\u001b[0m     \u001b[1;32mif\u001b[0m \u001b[0mmonth\u001b[0m \u001b[1;33m!=\u001b[0m\u001b[1;34m'all'\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m     83\u001b[0m         \u001b[0mmonths\u001b[0m \u001b[1;33m=\u001b[0m \u001b[1;33m[\u001b[0m\u001b[1;34m'january'\u001b[0m\u001b[1;33m,\u001b[0m\u001b[1;34m'february'\u001b[0m\u001b[1;33m,\u001b[0m\u001b[1;34m'march'\u001b[0m\u001b[1;33m,\u001b[0m\u001b[1;34m'april'\u001b[0m\u001b[1;33m,\u001b[0m\u001b[1;34m'may'\u001b[0m\u001b[1;33m,\u001b[0m\u001b[1;34m'june'\u001b[0m\u001b[1;33m]\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n",
-      "\u001b[1;31mAttributeError\u001b[0m: 'DatetimeProperties' object has no attribute 'weekday_name'"
-     ]
-    }
-   ],
    "source": [
     "import time\n",
     "import pandas as pd\n",
